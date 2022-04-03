@@ -18,7 +18,7 @@ class TranslationsTableSeeder extends Seeder
     public function run()
     {
         $this->dataTypesTranslations();
-        $this->articleCategorysTranslations();
+        $this->articleCategoriesTranslations();
         $this->menusTranslations();
     }
 
@@ -27,19 +27,19 @@ class TranslationsTableSeeder extends Seeder
      *
      * @return void
      */
-    private function articleCategorysTranslations()
+    private function articleCategoriesTranslations()
     {
-        // Adding translations for 'article_categorys'
+        // Adding translations for 'article_categories'
         //
         $cat = ArticleCategory::where('name', 'article-category-1')->first();
         if ($cat->exists) {
-            $this->trans('pt', $this->arr(['article_categorys', 'name'], $cat->id), 'article-category-1');
-            $this->trans('pt', $this->arr(['article_categorys', 'description'], $cat->id), 'ArticleCategory 1');
+            $this->trans('pt', $this->arr(['article_categories', 'name'], $cat->id), 'article-category-1');
+            $this->trans('pt', $this->arr(['article_categories', 'description'], $cat->id), 'ArticleCategory 1');
         }
         $cat = ArticleCategory::where('name', 'article-category-2')->first();
         if ($cat->exists) {
-            $this->trans('pt', $this->arr(['article_categorys', 'name'], $cat->id), 'article-category-2');
-            $this->trans('pt', $this->arr(['article_categorys', 'description'], $cat->id), 'ArticleCategory 2');
+            $this->trans('pt', $this->arr(['article_categories', 'name'], $cat->id), 'article-category-2');
+            $this->trans('pt', $this->arr(['article_categories', 'description'], $cat->id), 'ArticleCategory 2');
         }
     }
 
@@ -66,7 +66,7 @@ class TranslationsTableSeeder extends Seeder
         $_tpl = ['data_types', $_fld];
         $dtp = DataType::where($_fld, __('joy-voyager-bread-article-category::seeders.data_types.category.plural'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'ArticleCategorys');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'ArticleCategories');
         }
     }
 
@@ -78,9 +78,9 @@ class TranslationsTableSeeder extends Seeder
     private function menusTranslations()
     {
         $_tpl = ['menu_items', 'title'];
-        $_item = $this->findMenuItem(__('joy-voyager-bread-article-category::seeders.menu_items.article_categorys'));
+        $_item = $this->findMenuItem(__('joy-voyager-bread-article-category::seeders.menu_items.article_categories'));
         if ($_item->exists) {
-            $this->trans('pt', $this->arr($_tpl, $_item->id), 'ArticleCategorys');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'ArticleCategories');
         }
     }
 

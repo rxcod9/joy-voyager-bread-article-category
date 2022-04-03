@@ -14,7 +14,7 @@ class DataRowsTableSeeder extends Seeder
      */
     public function run()
     {
-        $articleCategoryDataType = DataType::where('slug', 'article-categorys')->firstOrFail();
+        $articleCategoryDataType = DataType::where('slug', 'article-categories')->firstOrFail();
 
         $dataRow = $this->dataRow($articleCategoryDataType, 'id');
         if (!$dataRow->exists) {
@@ -239,12 +239,12 @@ class DataRowsTableSeeder extends Seeder
                 'delete'       => 0,
                 'details'      => [
                     'model'       => 'Joy\\VoyagerBreadArticleCategory\\Models\\ArticleCategory',
-                    'table'       => 'article_categorys',
+                    'table'       => 'article_categories',
                     'type'        => 'belongsTo',
                     'column'      => 'parent_id',
                     'key'         => 'id',
                     'label'       => 'name',
-                    'pivot_table' => 'article_categorys',
+                    'pivot_table' => 'article_categories',
                     'pivot'       => 0,
                 ],
                 'order'        => 16,

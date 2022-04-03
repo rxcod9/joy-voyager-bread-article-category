@@ -5,7 +5,7 @@ namespace Joy\VoyagerBreadArticleCategory\Database\Seeders;
 use Joy\VoyagerBreadArticleCategory\Models\ArticleCategory;
 use Illuminate\Database\Seeder;
 
-class DummyArticleCategorysTableSeeder extends Seeder
+class DummyArticleCategoriesTableSeeder extends Seeder
 {
     /**
      * Auto generated seed file.

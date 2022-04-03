@@ -21,9 +21,9 @@ class MenuItemsTableSeeder extends Seeder
     
         $menuItem = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
-            'title'   => __('joy-voyager-bread-article-category::seeders.menu_items.article_categorys'),
+            'title'   => __('joy-voyager-bread-article-category::seeders.menu_items.article_categories'),
             'url'     => '',
-            'route'   => 'voyager.article-categorys.index',
+            'route'   => 'voyager.article-categories.index',
         ]);
         if (!$menuItem->exists) {
             $menuItem->fill([

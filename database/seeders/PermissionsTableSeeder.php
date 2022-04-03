@@ -13,6 +13,6 @@ class PermissionsTableSeeder extends VoyagerPermissionsTableSeeder
      */
     public function run()
     {
-        Permission::generateFor('article_categorys');
+        Permission::generateFor('article_categories');
     }
 }
