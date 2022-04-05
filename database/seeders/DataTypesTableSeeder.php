@@ -18,7 +18,7 @@ class DataTypesTableSeeder extends Seeder
                 'name'                  => 'article_categories',
                 'display_name_singular' => __('joy-voyager-bread-article-category::seeders.data_types.article_category.singular'),
                 'display_name_plural'   => __('joy-voyager-bread-article-category::seeders.data_types.article_category.plural'),
-                'icon'                  => 'voyager-bread',
+                'icon'                  => 'voyager-bread voyager-bread-article-category voyager-categories',
                 'model_name'            => 'Joy\\VoyagerBreadArticleCategory\\Models\\ArticleCategory',
                 // 'policy_name'           => 'Joy\\VoyagerBreadArticleCategory\\Policies\\ArticleCategoryPolicy',
                 // 'controller'            => 'Joy\\VoyagerBreadArticleCategory\\Http\\Controllers\\VoyagerBreadArticleCategoryController',
