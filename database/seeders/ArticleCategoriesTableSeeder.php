@@ -18,7 +18,7 @@ class ArticleCategoriesTableSeeder extends Seeder
             return false;
         }
 
-        $count = 100;
+        $count = 20;
         ArticleCategory::factory()
             ->count($count)
             ->state(function (array $attributes) use ($count) {
