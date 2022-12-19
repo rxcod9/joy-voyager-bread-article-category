@@ -12,7 +12,7 @@ class SettingsTableSeeder extends Seeder
      */
     public function run()
     {
-        $setting = $this->findSetting('article_category.key1');
+        $setting = $this->findSetting('articlecategory.key1');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => __('joy-voyager-bread-article-category::seeders.settings.article_category.key1'),
@@ -24,7 +24,7 @@ class SettingsTableSeeder extends Seeder
             ])->save();
         }
 
-        $setting = $this->findSetting('article_category.image');
+        $setting = $this->findSetting('articlecategory.image');
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => __('joy-voyager-bread-article-category::seeders.settings.article_category.image'),
